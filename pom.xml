@@ -19,7 +19,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<commons.lang.version>3.4</commons.lang.version>
 		<lombok.version>1.16.20</lombok.version>
-		<spring-cloud.version>Finchley.BUILD-SNAPSHOT</spring-cloud.version>
+		<spring-cloud.version>Finchley.SR4</spring-cloud.version>
 	</properties>
 	<artifactId>dashlines-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -32,7 +32,15 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			
 		</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
